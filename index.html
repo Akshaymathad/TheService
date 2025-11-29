@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Service | Instant Inline Content Hosting</title>
+    <meta name="description" content="The Service is the world's fastest inline content hosting engine. Deploy JSON, HTML, and assets to the edge in milliseconds. Zero build steps required.">
+    <meta property="og:title" content="The Service | Instant Inline Content Hosting">
+    <meta property="og:description" content="Deploy content instantly. Zero build steps. The developer-first platform for dynamic inline content.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theservice.co.in/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://theservice.co.in/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "The Service",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="bg-dark-900 text-slate-300 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-600 text-white px-4 py-2 rounded z-50">Skip to content</a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark-900/80 backdrop-blur-md border-b border-dark-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-white font-bold text-xl tracking-tight">The Service<span class="text-brand-500">.</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#features" class="hover:text-white transition-colors">Features</a>
+                        <a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a>
+                        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                        <a href="#signup" class="bg-brand-600 hover:bg-brand-500 text-white px-4 py-2 rounded-md font-medium transition-colors">Get Started</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-dark-800 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-dark-800 border-b border-dark-700">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-dark-700">Features</a>
+                <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-dark-700">How it Works</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-dark-700">Pricing</a>
+                <a href="#signup" class="block px-3 py-2 rounded-md text-base font-medium bg-brand-600 text-white hover:bg-brand-500">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 fade-up">
+                    Deploy Content Instantly.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-cyan-400">Zero Build Steps.</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400 mb-10 fade-up" style="transition-delay: 100ms;">
+                    The world's fastest inline content hosting engine. Push JSON, HTML, or Assets directly to the edge and consume them in milliseconds.
+                </p>
+                <div class="flex justify-center gap-4 fade-up" style="transition-delay: 200ms;">
+                    <a href="#signup" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-all shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40">Start Hosting Free</a>
+                    <a href="#docs" class="bg-dark-800 hover:bg-dark-700 text-white px-8 py-3 rounded-lg font-semibold text-lg border border-dark-700 transition-all">Read Documentation</a>
+                </div>
+            </div>
+            <!-- Background Glow -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none">
+                <div class="absolute top-20 left-20 w-72 h-72 bg-brand-500 rounded-full blur-3xl mix-blend-screen"></div>
+                <div class="absolute top-40 right-20 w-96 h-96 bg-cyan-500 rounded-full blur-3xl mix-blend-screen"></div>
+            </div>
+        </section>
+
+        <!-- Benefits Grid -->
+        <section id="features" class="py-20 bg-dark-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Why Engineering Teams Choose The Service</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Built for developers who demand performance, reliability, and developer experience.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 hover:border-brand-500/50 transition-colors fade-up">
+                        <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center mb-6 text-brand-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Global Edge Network</h3>
+                        <p class="text-slate-400">Content is automatically replicated to 300+ edge nodes worldwide. < 50ms latency guaranteed.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 hover:border-brand-500/50 transition-colors fade-up" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center mb-6 text-brand-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Instant Invalidation</h3>
+                        <p class="text-slate-400">Purge cache globally in under 150ms. No more waiting for CDNs to catch up.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 hover:border-brand-500/50 transition-colors fade-up" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center mb-6 text-brand-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">API-First Design</h3>
+                        <p class="text-slate-400">Everything is controllable via our REST API. Automate your content pipeline completely.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 hover:border-brand-500/50 transition-colors fade-up">
+                        <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center mb-6 text-brand-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+                        <p class="text-slate-400">SOC2 Type II certified. Role-based access control, audit logs, and DDoS protection included.</p>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 hover:border-brand-500/50 transition-colors fade-up" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center mb-6 text-brand-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Zero-Config</h3>
+                        <p class="text-slate-400">No YAML files, no complex pipelines. Just an API key and a POST request.</p>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 hover:border-brand-500/50 transition-colors fade-up" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center mb-6 text-brand-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Version Control</h3>
+                        <p class="text-slate-400">Rollback to any previous version of your content instantly via the dashboard or API.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6">Built for Dynamic Content</h2>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-500/20 flex items-center justify-center mt-1">
+                                    <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-white">Feature Flags & Configuration</h4>
+                                    <p class="text-slate-400">Update app configuration without redeploying your entire application.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-500/20 flex items-center justify-center mt-1">
+                                    <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-white">Localization (i18n)</h4>
+                                    <p class="text-slate-400">Host translation files and update copy instantly across all regions.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-500/20 flex items-center justify-center mt-1">
+                                    <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-white">Micro-Frontends</h4>
+                                    <p class="text-slate-400">Serve HTML fragments that can be injected into any host application.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-800 rounded-xl p-6 border border-dark-700 font-mono text-sm relative overflow-hidden shadow-2xl">
+                        <div class="flex space-x-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="text-slate-300">
+                            <p class="text-slate-500">// 1. Push content</p>
+                            <p><span class="text-purple-400">await</span> theService.<span class="text-blue-400">push</span>({</p>
+                            <p class="pl-4">key: <span class="text-green-400">'pricing-table'</span>,</p>
+                            <p class="pl-4">content: { basic: 0, pro: 29 }</p>
+                            <p>});</p>
+                            <br>
+                            <p class="text-slate-500">// 2. Fetch anywhere</p>
+                            <p><span class="text-purple-400">const</span> pricing = <span class="text-purple-400">await</span> fetch(</p>
+                            <p class="pl-4"><span class="text-green-400">'https://edge.theservice.co.in/pricing-table'</span></p>
+                            <p>);</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="py-20 bg-dark-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">How Inline Content Hosting Works</h2>
+                </div>
+                <div class="relative">
+                    <!-- Connector Line -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-dark-700 -translate-y-1/2 z-0"></div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                        <div class="bg-dark-900 p-6 rounded-xl border border-dark-700 text-center">
+                            <div class="w-10 h-10 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 border-4 border-dark-900">1</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Create</h3>
+                            <p class="text-slate-400 text-sm">Define your content structure in JSON, HTML, or plain text.</p>
+                        </div>
+                        <div class="bg-dark-900 p-6 rounded-xl border border-dark-700 text-center">
+                            <div class="w-10 h-10 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 border-4 border-dark-900">2</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Push</h3>
+                            <p class="text-slate-400 text-sm">Send to our API. We validate, version, and distribute to the edge.</p>
+                        </div>
+                        <div class="bg-dark-900 p-6 rounded-xl border border-dark-700 text-center">
+                            <div class="w-10 h-10 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 border-4 border-dark-900">3</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Consume</h3>
+                            <p class="text-slate-400 text-sm">Fetch from your app with zero latency using our global CDN.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+                    <p class="text-slate-400">Start for free, scale as you grow.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Free Tier -->
+                    <div class="bg-dark-900 p-8 rounded-xl border border-dark-700">
+                        <h3 class="text-xl font-bold text-white mb-2">Developer</h3>
+                        <div class="text-3xl font-bold text-white mb-6">$0<span class="text-sm text-slate-400 font-normal">/mo</span></div>
+                        <ul class="space-y-4 mb-8 text-slate-400 text-sm">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 5,000 Requests/mo</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 100 MB Storage</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Community Support</li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 px-4 bg-dark-700 hover:bg-dark-600 text-white text-center rounded-lg font-medium transition-colors">Start Free</a>
+                    </div>
+                    <!-- Pro Tier -->
+                    <div class="bg-dark-900 p-8 rounded-xl border-2 border-brand-500 relative transform md:-translate-y-4">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Most Popular</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Pro</h3>
+                        <div class="text-3xl font-bold text-white mb-6">$29<span class="text-sm text-slate-400 font-normal">/mo</span></div>
+                        <ul class="space-y-4 mb-8 text-slate-400 text-sm">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 1 Million Requests/mo</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 10 GB Storage</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Email Support</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 3 Team Members</li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 px-4 bg-brand-600 hover:bg-brand-500 text-white text-center rounded-lg font-medium transition-colors">Get Started</a>
+                    </div>
+                    <!-- Enterprise Tier -->
+                    <div class="bg-dark-900 p-8 rounded-xl border border-dark-700">
+                        <h3 class="text-xl font-bold text-white mb-2">Enterprise</h3>
+                        <div class="text-3xl font-bold text-white mb-6">Custom</div>
+                        <ul class="space-y-4 mb-8 text-slate-400 text-sm">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Unlimited Requests</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Unlimited Storage</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 24/7 Dedicated Support</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> SSO & SLA</li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 px-4 bg-dark-700 hover:bg-dark-600 text-white text-center rounded-lg font-medium transition-colors">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 bg-dark-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark-900 p-6 rounded-xl border border-dark-700">
+                        <p class="text-slate-300 mb-6">"The Service transformed how we handle feature flags. We pushed updates to 5M users instantly without a single deployment."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-slate-700 rounded-full flex-shrink-0"></div>
+                            <div class="ml-3">
+                                <div class="text-white font-medium">Sarah Chen</div>
+                                <div class="text-slate-500 text-sm">CTO, TechFlow</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-dark-900 p-6 rounded-xl border border-dark-700">
+                        <p class="text-slate-300 mb-6">"Finally, a way to manage dynamic content that doesn't feel like a bloated CMS. It's just JSON, exactly how we like it."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-slate-700 rounded-full flex-shrink-0"></div>
+                            <div class="ml-3">
+                                <div class="text-white font-medium">Marcus Rodriguez</div>
+                                <div class="text-slate-500 text-sm">Lead Engineer, BuildCo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-dark-900 p-6 rounded-xl border border-dark-700">
+                        <p class="text-slate-300 mb-6">"The latency is non-existent. We use The Service for our global pricing tables and it's been 100% reliable."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-slate-700 rounded-full flex-shrink-0"></div>
+                            <div class="ml-3">
+                                <div class="text-white font-medium">Emily Watson</div>
+                                <div class="text-slate-500 text-sm">Product Manager, ScaleUp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Is this a CMS?</h3>
+                        <p class="text-slate-400">Not in the traditional sense. We are a headless content engine designed for developers. You push raw data (JSON, HTML) and we serve it. No WYSIWYG editors, just pure API power.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">How fast is the propagation?</h3>
+                        <p class="text-slate-400">Global propagation typically takes less than 150ms. We use a distributed edge network to ensure your content is always fresh.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Can I host images?</h3>
+                        <p class="text-slate-400">Yes, we support static asset hosting including images, fonts, and PDFs, served via our global CDN.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-gradient-to-r from-brand-900 to-brand-800 rounded-2xl p-12 border border-brand-700/50">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to ship faster?</h2>
+                    <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">Join 10,000+ developers who are building faster, more dynamic applications with The Service.</p>
+                    <a href="#signup" class="inline-block bg-white text-brand-600 hover:bg-brand-50 px-8 py-3 rounded-lg font-bold text-lg transition-colors">Start Hosting for Free</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark-900 border-t border-dark-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-white font-bold text-xl">The Service<span class="text-brand-500">.</span></span>
+                    <p class="text-slate-500 text-sm mt-2">© 2024 The Service Inc. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">Twitter</a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">GitHub</a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
