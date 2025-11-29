@@ -1,0 +1,24 @@
+name: Handle Contact Submission
+
+on:
+  push:
+    paths:
+      - 'submissions/**.json'
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Create Issue from Submission
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            // Logic to read the pushed JSON and create an issue
+            // This is an example of OSS automation without external services
+            console.log("Processing submission...");

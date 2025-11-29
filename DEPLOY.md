@@ -1,90 +1,51 @@
-# Deployment Instructions
+# Deployment Instructions (OSS Only)
 
-Follow these steps to deploy The Service landing page to your preferred hosting provider.
+## 1. Push to GitHub
 
-## Prerequisites
-
-- A GitHub account.
-- Git installed locally.
-
-## 1. Setup Repository
-
-Run these commands in your terminal to initialize the repository:
+Run these commands to deploy your open-source site:
 
 ```bash
-# Initialize git
-git init
-
-# Add all files
+# Add all new files
 git add .
 
-# Commit
-git commit -m "Initial commit: The Service landing page"
+# Commit changes
+git commit -m "Upgrade to OSS-only stack"
 
-# Rename branch to main
-git branch -M main
-
-# Add remote (replace with your repo URL)
-git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
-
-# Push
-git push -u origin main
+# Force push (overwrites previous history to ensure clean state)
+git push -f origin main
 ```
 
-## 2. Deploy to GitHub Pages
+## 2. Verify GitHub Pages
 
-**Best for**: Static hosting, zero config.
+1. Go to **Settings > Pages**.
+2. Source: **GitHub Actions** (Since we added `.github/workflows/pages-deploy.yml`).
+   - *Note: If you don't see "GitHub Actions", select "Deploy from a branch" -> "main" -> "/" first, then switch if needed. But usually, the presence of the workflow file automatically switches it.*
+3. Custom Domain: Ensure `theservice.co.in` is set.
+4. Enforce HTTPS: **Check**.
 
-1. Go to your repository on GitHub.
-2. Click **Settings** > **Pages**.
-3. Under **Build and deployment** > **Source**, select **Deploy from a branch**.
-4. Under **Branch**, select `main` and folder `/ (root)`.
-5. Click **Save**.
-6. Wait 1-2 minutes. Your site will be live at `https://<username>.github.io/<repo-name>/`.
+## 3. DNS Configuration (Zero Dependency)
 
-## 3. Deploy to Vercel
+Ensure your DNS provider (GoDaddy/Namecheap) has these **exact** records. No forwarding, no masking.
 
-**Best for**: Static hosting + Serverless functions (api/ping.js).
+| Type | Name | Value | TTL |
+|------|------|-------|-----|
+| A | @ | 185.199.108.153 | 1h |
+| A | @ | 185.199.109.153 | 1h |
+| A | @ | 185.199.110.153 | 1h |
+| A | @ | 185.199.111.153 | 1h |
+| CNAME | www | akshaymathad.github.io | 1h |
 
-1. Install Vercel CLI (optional) or use the Dashboard.
-2. **Dashboard Method**:
-   - Go to [vercel.com/new](https://vercel.com/new).
-   - Import your GitHub repository.
-   - Framework Preset: **Other**.
-   - Build Command: Leave empty.
-   - Output Directory: Leave empty.
-   - Click **Deploy**.
-3. **CLI Method**:
-   ```bash
-   npm i -g vercel
-   vercel
-   # Follow the prompts (accept defaults)
-   ```
-4. Your API endpoint will be available at `/api/ping`.
+## 4. Verification Commands
 
-## 4. Deploy to Netlify
+Run these to verify everything is correct:
 
-**Best for**: Drag & drop or Git integration.
+```bash
+# Check Apex Domain (Should return 4 IPs)
+dig +short A theservice.co.in
 
-1. Go to [app.netlify.com](https://app.netlify.com).
-2. Click **Add new site** > **Import from an existing project**.
-3. Select **GitHub** and choose your repository.
-4. **Build settings**:
-   - Base directory: `/` (leave empty).
-   - Build command: (leave empty).
-   - Publish directory: `/` (leave empty).
-5. Click **Deploy site**.
-6. Netlify automatically detects `api/ping.js` if you configure it as a function, but for standard static hosting, it works out of the box. *Note: For Netlify Functions, move `api/ping.js` to `netlify/functions/ping.js` or configure `netlify.toml`.*
+# Check WWW Redirect (Should return your github.io address)
+dig +short CNAME www.theservice.co.in
 
-## 5. Deploy to Cloudflare Pages
-
-**Best for**: Global edge performance.
-
-1. Go to the Cloudflare Dashboard > **Pages**.
-2. Click **Connect to Git**.
-3. Select your repository.
-4. **Build settings**:
-   - Framework preset: **None**.
-   - Build command: (leave empty).
-   - Build output directory: (leave empty).
-5. Click **Save and Deploy**.
+# Check Headers (Look for HTTP/2 200)
+curl -I https://theservice.co.in
+```
