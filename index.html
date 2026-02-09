@@ -4,94 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Service | Open Source Inline Content Engine</title>
+    <title>Agentic AI Studio | AI Workflow Automation for Restaurants</title>
     <meta name="description"
-        content="The Service is a 100% open-source, zero-dependency inline content hosting engine. Deploy JSON & HTML to the edge. Privacy-first.">
+        content="Agentic AI Studio delivers intelligent AI agents for restaurants. Automate reservations, customer service, inventory management and more.">
     <link rel="canonical" href="https://theservice.co.in/">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://theservice.co.in/">
-    <meta property="og:title" content="The Service | Open Source Inline Content Engine">
-    <meta property="og:description" content="Deploy content instantly. Zero build steps. 100% Open Source.">
-    <meta property="og:image" content="https://theservice.co.in/assets/og-image.png">
+    <meta property="og:title" content="Agentic AI Studio | AI Workflow Automation for Restaurants">
+    <meta property="og:description"
+        content="Deploy intelligent AI agents that handle reservations, customer service, and more.">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://theservice.co.in/">
-    <meta property="twitter:title" content="The Service | Open Source Inline Content Engine">
-    <meta property="twitter:description" content="Deploy content instantly. Zero build steps. 100% Open Source.">
-    <meta property="twitter:image" content="https://theservice.co.in/assets/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS (CDN - Open Source) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: { 500: '#0ea5e9', 600: '#0284c7' },
-                        dark: { 900: '#0f172a', 800: '#1e293b', 700: '#334155' }
+                        primary: { 400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9' },
+                        accent: { 400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2' },
+                        dark: { 900: '#0a0a0f', 850: '#0f0f18', 800: '#151520', 700: '#1f1f2e', 600: '#2a2a3d' }
                     },
-                    fontFamily: { sans: ['system-ui', 'sans-serif'] }
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
                 }
             }
         }
     </script>
 
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "The Service",
-      "applicationCategory": "DeveloperTool",
-      "operatingSystem": "Any",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
     <style>
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #0f0f18 50%, #0a0a0f 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #a78bfa 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .glow-card:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 30px rgba(139, 92, 246, 0.6);
+            transform: translateY(-2px);
+        }
+
         .fade-up {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
         .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+            }
+        }
     </style>
 </head>
 
-<body class="bg-dark-900 text-slate-300 antialiased">
+<body class="text-slate-300 antialiased font-sans">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-dark-900/90 backdrop-blur border-b border-dark-700">
+    <nav class="fixed w-full z-50 bg-dark-900/80 backdrop-blur-xl border-b border-dark-600/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-white font-bold text-xl">The Service<span
-                            class="text-brand-500">.</span></a>
+                    <a href="#" class="flex items-center gap-2">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span class="text-white font-bold text-xl">Agentic AI<span
+                                class="text-primary-400">.</span></span>
+                    </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#features" class="hover:text-white transition-colors">Features</a>
                         <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
-                        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
-                        <a href="#contact"
-                            class="bg-brand-600 hover:bg-brand-500 text-white px-4 py-2 rounded-md font-medium transition-colors">Get
+                        <a href="about.html" class="hover:text-white transition-colors">About</a>
+                        <a href="#contact" class="btn-primary text-white px-5 py-2 rounded-lg font-medium">Get
                             Started</a>
                     </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
                     <button type="button" id="mobile-menu-btn" class="text-slate-400 hover:text-white p-2">
-                        <span class="sr-only">Open menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -101,119 +140,211 @@
             </div>
         </div>
         <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 bg-dark-800 border-b border-dark-700">
-                <a href="#features" class="block px-3 py-2 text-base font-medium hover:text-white">Features</a>
-                <a href="#pricing" class="block px-3 py-2 text-base font-medium hover:text-white">Pricing</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-medium bg-brand-600 text-white rounded">Get
-                    Started</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-dark-800 border-b border-dark-600">
+                <a href="#features" class="block px-3 py-2 hover:text-white">Features</a>
+                <a href="#pricing" class="block px-3 py-2 hover:text-white">Pricing</a>
+                <a href="about.html" class="block px-3 py-2 hover:text-white">About</a>
+                <a href="#contact" class="block px-3 py-2 bg-primary-600 text-white rounded">Get Started</a>
             </div>
         </div>
     </nav>
 
     <main>
         <!-- Hero -->
-        <section class="pt-32 pb-20 text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 fade-up">
-                Open Source Content Engine.<br>
-                <span class="text-brand-500">Zero Dependencies.</span>
-            </h1>
-            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 fade-up">
-                Deploy JSON and HTML to the edge without proprietary lock-in.
-                Self-hostable, privacy-first, and built for developers.
-            </p>
-            <div class="flex justify-center gap-4 fade-up">
-                <a href="#contact"
-                    class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-3 rounded-lg font-bold transition-all">Start
-                    Free</a>
-                <a href="https://github.com/Akshaymathad/TheService"
-                    class="border border-dark-700 hover:bg-dark-800 text-white px-8 py-3 rounded-lg font-bold transition-all">View
-                    on GitHub</a>
+        <section class="hero-gradient pt-32 pb-24 text-center px-4 min-h-screen flex flex-col justify-center">
+            <div class="max-w-5xl mx-auto">
+                <div
+                    class="inline-flex items-center gap-2 bg-dark-700/50 border border-dark-600 rounded-full px-4 py-2 mb-8 fade-up">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="text-sm text-slate-400">Now serving 50+ restaurants worldwide</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-8 fade-up leading-tight">
+                    AI-Powered Automation<br>
+                    <span class="gradient-text">for Restaurants</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12 fade-up leading-relaxed">
+                    Deploy intelligent AI agents that handle reservations, customer service,
+                    inventory management, and more — 24/7, without human intervention.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4 fade-up">
+                    <a href="#contact" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg">Start Free
+                        Trial</a>
+                    <a href="#features"
+                        class="border border-dark-600 hover:bg-dark-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all">See
+                        How It Works</a>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 fade-up">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-white">50+</div>
+                        <div class="text-slate-500 mt-1">Restaurants</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-white">1M+</div>
+                        <div class="text-slate-500 mt-1">Interactions</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-white">99.9%</div>
+                        <div class="text-slate-500 mt-1">Uptime</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-white">4.9★</div>
+                        <div class="text-slate-500 mt-1">Rating</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Features -->
-        <section id="features" class="py-20 bg-dark-800/50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="features" class="py-24 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 fade-up">Intelligent Agents for<br><span
+                            class="gradient-text">Every Restaurant Need</span></h2>
+                    <p class="text-xl text-slate-400 max-w-2xl mx-auto fade-up">Our AI agents work around the clock,
+                        handling the tasks that keep your restaurant running smoothly.</p>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 fade-up">
-                        <h3 class="text-xl font-bold text-white mb-3">100% Open Source</h3>
-                        <p class="text-slate-400">No black boxes. Audit every line of code. Run it on your own
-                            infrastructure or ours.</p>
+                    <div class="glow-card p-8 rounded-2xl fade-up">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Smart Reservations</h3>
+                        <p class="text-slate-400 leading-relaxed">AI handles booking requests, modifications, and
+                            cancellations 24/7. Optimizes table assignments for maximum capacity.</p>
                     </div>
-                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 fade-up">
-                        <h3 class="text-xl font-bold text-white mb-3">Privacy First</h3>
-                        <p class="text-slate-400">No tracking pixels. No cookies. We respect your users' data
-                            sovereignty.</p>
+
+                    <div class="glow-card p-8 rounded-2xl fade-up">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Customer Service Bot</h3>
+                        <p class="text-slate-400 leading-relaxed">Instant responses to customer inquiries via phone,
+                            SMS, or chat. Handles FAQs, menu questions, and complaints.</p>
                     </div>
-                    <div class="p-8 bg-dark-900 rounded-xl border border-dark-700 fade-up">
-                        <h3 class="text-xl font-bold text-white mb-3">Zero Lock-in</h3>
-                        <p class="text-slate-400">Export your data anytime as standard JSON. Migrate in minutes, not
-                            months.</p>
+
+                    <div class="glow-card p-8 rounded-2xl fade-up">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Inventory Intelligence</h3>
+                        <p class="text-slate-400 leading-relaxed">Predict stock needs based on historical data. Automate
+                            supplier orders and reduce food waste.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Pricing -->
-        <section id="pricing" class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-bold text-white mb-12">Fair, Transparent Pricing</h2>
+        <section id="pricing" class="py-24 px-4 bg-dark-850/50">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 fade-up">Simple, <span
+                        class="gradient-text">Transparent Pricing</span></h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-16 fade-up">No hidden fees. No long-term
+                    contracts. Scale as you grow.</p>
+
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-dark-900 p-8 rounded-xl border border-dark-700">
-                        <h3 class="text-xl font-bold text-white">Self-Hosted</h3>
-                        <div class="text-3xl font-bold text-white my-4">$0</div>
-                        <p class="text-slate-400 mb-6">Run it yourself. Forever free.</p>
-                        <a href="https://github.com/Akshaymathad/TheService"
-                            class="block py-2 px-4 bg-dark-700 text-white rounded hover:bg-dark-600">Clone Repo</a>
+                    <div class="glow-card p-8 rounded-2xl fade-up">
+                        <h3 class="text-xl font-bold text-white">Starter</h3>
+                        <div class="my-6"><span class="text-5xl font-bold text-white">$49</span><span
+                                class="text-slate-400">/month</span></div>
+                        <p class="text-slate-400 mb-8">Perfect for small restaurants.</p>
+                        <ul class="space-y-3 text-left mb-8 text-slate-300">
+                            <li>✓ 1 AI Agent</li>
+                            <li>✓ 500 interactions/mo</li>
+                            <li>✓ Email support</li>
+                        </ul>
+                        <a href="#contact"
+                            class="block py-3 px-6 border border-dark-600 text-white rounded-xl hover:bg-dark-700 transition-all">Get
+                            Started</a>
                     </div>
-                    <div class="bg-dark-900 p-8 rounded-xl border-2 border-brand-500 relative">
+
+                    <div class="glow-card p-8 rounded-2xl relative border-2 border-primary-500 fade-up pulse-glow">
                         <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                            RECOMMENDED</div>
-                        <h3 class="text-xl font-bold text-white">Cloud</h3>
-                        <div class="text-3xl font-bold text-white my-4">$29<span
-                                class="text-sm text-slate-400">/mo</span></div>
-                        <p class="text-slate-400 mb-6">We manage the infrastructure.</p>
-                        <a href="#contact"
-                            class="block py-2 px-4 bg-brand-600 text-white rounded hover:bg-brand-500">Get Started</a>
+                            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-primary-500 to-accent-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                            POPULAR</div>
+                        <h3 class="text-xl font-bold text-white">Professional</h3>
+                        <div class="my-6"><span class="text-5xl font-bold text-white">$149</span><span
+                                class="text-slate-400">/month</span></div>
+                        <p class="text-slate-400 mb-8">For growing restaurants.</p>
+                        <ul class="space-y-3 text-left mb-8 text-slate-300">
+                            <li>✓ 3 AI Agents</li>
+                            <li>✓ 5,000 interactions/mo</li>
+                            <li>✓ Priority support</li>
+                            <li>✓ Custom integrations</li>
+                        </ul>
+                        <a href="#contact" class="block py-3 px-6 btn-primary text-white rounded-xl">Get Started</a>
                     </div>
-                    <div class="bg-dark-900 p-8 rounded-xl border border-dark-700">
+
+                    <div class="glow-card p-8 rounded-2xl fade-up">
                         <h3 class="text-xl font-bold text-white">Enterprise</h3>
-                        <div class="text-3xl font-bold text-white my-4">Custom</div>
-                        <p class="text-slate-400 mb-6">SLA, Support, & Audit Logs.</p>
+                        <div class="my-6"><span class="text-5xl font-bold text-white">Custom</span></div>
+                        <p class="text-slate-400 mb-8">For restaurant chains.</p>
+                        <ul class="space-y-3 text-left mb-8 text-slate-300">
+                            <li>✓ Unlimited AI Agents</li>
+                            <li>✓ Unlimited interactions</li>
+                            <li>✓ Dedicated support</li>
+                            <li>✓ SLA guarantee</li>
+                        </ul>
                         <a href="#contact"
-                            class="block py-2 px-4 bg-dark-700 text-white rounded hover:bg-dark-600">Contact Us</a>
+                            class="block py-3 px-6 border border-dark-600 text-white rounded-xl hover:bg-dark-700 transition-all">Contact
+                            Sales</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact / CTA -->
-        <section id="contact" class="py-20 bg-dark-800/50">
-            <div class="max-w-3xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-white mb-8">Ready to Deploy?</h2>
-                <p class="text-slate-400 mb-8">Contact us to get your API keys or support for self-hosting.</p>
-
-                <!-- Method 1: Mailto Fallback (Zero Dependency) -->
-                <a href="mailto:contact@theservice.co.in?subject=Inquiry%20from%20Website"
-                    class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700 md:text-xl">
-                    Email Us Directly
-                </a>
-
-                <p class="mt-4 text-sm text-slate-500">
-                    Prefer GitHub? <a href="https://github.com/Akshaymathad/TheService/issues/new"
-                        class="text-brand-500 hover:underline">Open an Issue</a>.
-                </p>
+        <!-- Contact -->
+        <section id="contact" class="py-24 px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 fade-up">Ready to <span
+                        class="gradient-text">Transform</span> Your Restaurant?</h2>
+                <p class="text-xl text-slate-400 mb-12 fade-up">Join 50+ restaurants using Agentic AI Studio to automate
+                    their workflows.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 fade-up">
+                    <a href="mailto:contact@theservice.co.in?subject=Agentic%20AI%20Inquiry"
+                        class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg">Get in Touch</a>
+                    <a href="https://github.com/Akshaymathad"
+                        class="border border-dark-600 hover:bg-dark-700 text-white px-10 py-4 rounded-xl font-bold transition-all">View
+                        GitHub</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark-900 border-t border-dark-700 py-12 text-center">
-        <p class="text-slate-500">© 2024 The Service. Open Source (MIT License).</p>
-        <div class="mt-4 space-x-4">
-            <a href="#" class="text-slate-400 hover:text-white">Privacy</a>
-            <a href="#" class="text-slate-400 hover:text-white">Terms</a>
-            <a href="https://github.com/Akshaymathad/TheService" class="text-slate-400 hover:text-white">GitHub</a>
+    <footer class="bg-dark-900 border-t border-dark-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <span class="text-white font-bold">Agentic AI<span class="text-primary-400">.</span></span>
+            </div>
+            <p class="text-slate-500">© 2026 Agentic AI Studio. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="about.html" class="text-slate-400 hover:text-white">About</a>
+                <a href="#" class="text-slate-400 hover:text-white">Privacy</a>
+            </div>
         </div>
     </footer>
 
